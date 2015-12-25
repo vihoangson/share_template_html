@@ -178,29 +178,58 @@
 					"name_theme"   => "Vitality-v1.3.6",
 					"link_zip"     => "store/vitality-v1.3.6/vitality-v1.3.6.zip",
 					"link_preview" => "store/vitality-v1.3.6",
-					"link_img"     => "store/images_preview/2015-12-25 10_09_21-Vitality.png",
+					"link_img"     => "store/00_images_preview/2015-12-25 10_09_21-Vitality.png",
+					"price"        => "16$",
 				],
 
 				[
 					"name_theme"   => "Webapplayers.com",
 					"link_zip"     => "store/webapplayers.com/webapplayers.com.zip",
 					"link_preview" => "store/webapplayers.com",
-					"link_img"     => "store/images_preview/2015-12-25 10_09_37-INSPINIA _ Dashboard.png",
+					"link_img"     => "store/00_images_preview/2015-12-25 10_09_37-INSPINIA _ Dashboard.png",
+					"price"        => "20$",
 				],
 
 				[
 					"name_theme"   => "Templatevideo",
 					"link_zip"     => "store/templatevideo/templatevideo.zip",
 					"link_preview" => "store/templatevideo",
-					"link_img"     => "store/images_preview/2015-12-25 10_09_52-Video 1.png",
+					"link_img"     => "store/00_images_preview/2015-12-25 10_09_52-Video 1.png",
+					"price"        => "10$",
 				],
 
 				[
 					"name_theme"   => "Templatevideo2",
 					"link_zip"     => "store/templatevideo2/templatevideo2.zip",
 					"link_preview" => "store/templatevideo2",
-					"link_img"     => "store/images_preview/2015-12-25 10_09_10-Video Cafe _ The Best Media Uploader.png",
+					"link_img"     => "store/00_images_preview/2015-12-25 10_09_10-Video Cafe _ The Best Media Uploader.png",
+					"price"        => "31$",
 				],
+
+				[
+					"name_theme"   => "Porto 4.4.0",
+					"link_zip"     => "store/porto/porto.zip",
+					"link_preview" => "store/porto",
+					"link_img"     => "store/00_images_preview/2015-12-25 11_47_17-Porto - Responsive HTML5 Template 4.4.0.png",
+					"price"        => "40$",
+				],
+
+				[
+					"name_theme"   => "Chelsea",
+					"link_zip"     => "store/chelsea/chelsea.zip",
+					"link_preview" => "store/chelsea",
+					"link_img"     => "store/00_images_preview/2015-12-25 12_20_21-Chelsea - Multi-Purpose Business Bootstrap HTML5 Template.png",
+					"price"        => "33$",
+				],
+
+				[
+					"name_theme"   => "Alliance-html",
+					"link_zip"     => "store/alliance-html/alliance-html.zip",
+					"link_preview" => "store/alliance-html",
+					"link_img"     => "store/00_images_preview/2015-12-25 13_11_52-Alliance - A Responsive Bootstrap 3 Admin Dashboard Template.png",
+					"price"        => "23$",
+				],
+				
 
 			];
 
@@ -213,10 +242,11 @@
 						?>
 						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 							<div class="">
-								<a href="<?= $value["link_preview"]; ?>" class="thumbnail">
+								<a target="_blank" href="<?= $value["link_preview"]; ?>" class="thumbnail">
 									<img src="<?= $value["link_img"]; ?>">
 								</a>
 								<h4><?= $value["name_theme"]; ?></h4>
+								<?= ($value["price"]?"Price: ".$value["price"]:""); ?>
 							</div>
 						</div>
 						<?php
