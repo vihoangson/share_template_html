@@ -101,6 +101,13 @@
 					"price"        => "19$",
 				],
 
+				[
+					"name_theme"   => "ortheme",
+					"link_zip"     => "store/ortheme/ortheme.zip",
+					"link_preview" => "store/ortheme",
+					"link_img"     => "store/00_images_preview/2015-12-29 13_56_41.png",
+					"price"        => "19$",
+				],
 			];
 
 			?>
