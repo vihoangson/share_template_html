@@ -85,6 +85,22 @@
 					"price"        => "23$",
 				],
 
+				[
+					"name_theme"   => "vcard",
+					"link_zip"     => "store/vcard/vcard.zip",
+					"link_preview" => "store/vcard",
+					"link_img"     => "store/00_images_preview/2015-12-29 08_28_34.png",
+					"price"        => "17$",
+				],
+
+				[
+					"name_theme"   => "wedding-bells",
+					"link_zip"     => "store/wedding-bells/wedding-bells.zip",
+					"link_preview" => "store/wedding-bells",
+					"link_img"     => "store/00_images_preview/2015-12-29 08_30_28.png",
+					"price"        => "19$",
+				],
+
 			];
 
 			?>
