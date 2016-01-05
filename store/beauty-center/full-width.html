@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
+<meta name="author" content="FamousThemes" />
+<meta name="description" content="Get in the spotlight" />
+<meta name="keywords" content="premium css templates, premium wordpress themes, famous themes, themeforest" />
+<title>Beauty Center | Html CSS Template</title>
+<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+<link href='http://fonts.googleapis.com/css?family=Dosis:200' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="prettyphoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+<!-- jQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<!-- Twitter Feed -->
+<script type="text/javascript" src="js/twitter/jquery.tweet.js" charset="utf-8"></script>
+<!-- Flickr Feed -->
+<script src="js/jflickrfeed.min.js"></script>
+<!-- PrettyPhoto -->
+<script type="text/javascript" src="js/custom.quicksand.js"></script>
+<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<!-- DropDownMenu -->
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" charset="utf-8">
+var $ = jQuery.noConflict(); 
+  $(window).load(function() {
+	$(function() {
+		$('.show_menu').click(function(){
+				$('.menu').fadeIn();
+				$('.show_menu').fadeOut();
+				$('.hide_menu').fadeIn();
+		});
+		$('.hide_menu').click(function(){
+				$('.menu').fadeOut();
+				$('.show_menu').fadeIn();
+				$('.hide_menu').fadeOut();
+		});
+	});
+
+  }); 
+  jQuery(function($){
+	$(".tweet").tweet({
+	  modpath: 'js/twitter/',
+	  join_text: "auto",
+	  username: "famousthemes",
+	  count: 1,
+	  auto_join_text_default: "we said,",
+	  auto_join_text_ed: "we",
+	  auto_join_text_ing: "we were",
+	  auto_join_text_reply: "we replied",
+	  auto_join_text_url: "we were checking out",
+	  loading_text: "loading tweets..."
+	});
+	$('#basicuse').jflickrfeed({
+		limit: 6,
+		qstrings: {
+			id: '31408169@N04'
+		},
+		itemTemplate: '<li><a href="{{image_b}}"><img src="{{image_s}}" alt="{{title}}" /></a></li>'
+	});
+  });
+</script>
+</head>
+<body>
+<div id="main_container">
+    
+    <div class="header">
+    <div class="logo"><h1><a href="index.html">beauty<span>center</span></a></h1></div>
+    
+	<a class="show_menu" href="#">menu</a>
+    <a class="hide_menu" href="#">close menu</a>
+    <div class="menu">                                                                   
+        <ul id="main_menu">
+        	<li><a href="index.html">home</a></li>
+            <li><a href="page.html">about us</a></li>
+            <li><a class="selected" href="full-width.html">drop down</a>
+            <ul>
+                <li><a href="services.html">services page</a></li>
+                <li><a href="gallery.html">gallery layout</a></li>
+                <li><a href="full-width.html">full width</a></li>
+                <li><a href="contact.html">contact form</a></li>
+            </ul>
+            </li>
+            <li><a href="blog.html">news</a></li>
+            <li><a href="gallery.html">gallery</a></li>
+            <li><a href="contact.html">contact</a></li> 
+        </ul>
+     </div>
+    
+    </div>
+    
+    
+    <div id="page_content">
+     
+        <div class="left_full">
+        <h1>Heading one - Full Width Content</h1>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur <strong>adipisicin</strong>g elit, sed do eiusmod tempor incididunt <a href="#">consectetur</a> adipisicing elit, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dol ore magna aliqua.Sed do eiusmod <strong>tempor incididunt</strong> ut labore et do lore magna aliqua. Ut enim ad minim veniam, <strong>quis</strong> nostrud exercitation ullamco laboris <a href="#">nisi ut</a> aliquip ex ea commodo consequat. 
+        </p>
+        </div>
+                
+        <div class="left12">
+        <h2>Heading two - Half Width Content</h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur <strong>adipisicin</strong>g elit, sed do eiusmod tempor incididunt <a href="#">consectetur</a> adipisicing elit, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
+        </p>
+        </div>
+        <div class="left12">
+        <h2>Heading two - Half Width Content</h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur <strong>adipisicin</strong>g elit, sed do eiusmod tempor incididunt <a href="#">consectetur</a> adipisicing elit, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
+        </p>
+        </div>
+        
+        
+        <div class="left13">
+        <h2>Heading three - Third Width Content</h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur <strong>adipisicin</strong>g elit, sed do eiusmod tempor incididunt <a href="#">consectetur</a> adipisicing elit, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
+        </p>
+        </div>
+        <div class="left13">
+        <h2>Heading three - Third Width Content</h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur <strong>adipisicin</strong>g elit, sed do eiusmod tempor incididunt <a href="#">consectetur</a> adipisicing elit, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
+        </p>
+        </div>
+        <div class="left13">
+        <h2>Heading three - Third Width Content</h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur <strong>adipisicin</strong>g elit, sed do eiusmod tempor incididunt <a href="#">consectetur</a> adipisicing elit, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
+        </p>
+        </div>
+        
+        
+        <div class="left14">
+        <h2>Heading four - Fourth Width Content</h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur <strong>adipisicin</strong>g elit, sed do eiusmod tempor incididunt <a href="#">consectetur</a> adipisicing elit, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
+        </p>
+        </div>
+        <div class="left14">
+        <h2>Heading four - Fourth Width Content</h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur <strong>adipisicin</strong>g elit, sed do eiusmod tempor incididunt <a href="#">consectetur</a> adipisicing elit, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
+        </p>
+        </div>
+        <div class="left14">
+        <h2>Heading four - Fourth Width Content</h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur <strong>adipisicin</strong>g elit, sed do eiusmod tempor incididunt <a href="#">consectetur</a> adipisicing elit, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
+        </p>
+        </div>
+        <div class="left14">
+        <h2>Heading four - Fourth Width Content</h2>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur <strong>adipisicin</strong>g elit, sed do eiusmod tempor incididunt <a href="#">consectetur</a> adipisicing elit, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua.
+        </p>
+        </div>
+   
+    <div class="clear"></div>     
+    </div>
+    
+    
+    <div class="home_bottom">
+   		<div class="left13 fdivider">
+        <h2>Latest <span>Tweets</span></h2>       
+        <div class="tweet"></div>
+        </div>
+        
+   		<div class="left13 fdivider">
+        <h2>From the <span>Blog</span></h2>
+
+        <ul class="list">
+        <li><a href="#">Acne solution facial</a></li>
+        <li><a href="#">Polish your skin to perfection</a></li>
+        <li><a href="#">Illuminate tired eyes</a></li>
+        <li><a href="#">Saturate your skin with pure oxygen.</a></li>
+        </ul>
+
+        </div>
+        
+   		<div class="left13 fdivider_last">
+        <h2>Say <span>Hello!</span></h2>
+        <p><strong>Email:</strong> beautycenter@email.com <br />
+<strong>Phone:</strong> 234 324 234 / 0678 </p>
+                <ul class="social_icons">
+                <li><a href="#"><img src="images/icons/icon_rss.png" alt="" title="" /></a></li>
+                <li><a href="#"><img src="images/icons/icon_facebook.png" alt="" title="" /></a></li>
+                <li><a href="#"><img src="images/icons/icon_twitter.png" alt="" title="" /></a></li>
+                <li><a href="#"><img src="images/icons/icon_google.png" alt="" title="" /></a></li>
+                </ul>
+        </div>    
+    </div>
+    
+   <div class="footer">
+       <div class="footer_text">
+       Beauty Center | Premium Beauty Template by <a href="http://famousthemes.com">Famous Themes</a> <br />
+       Photos by <a href="http://antondemin.ru" target="_blank">antondemin.ru</a>
+       </div>
+       <div class="footer_menu">
+           <ul>
+           <li class="selected"><a href="index.html">Home</a></li>             
+           <li><a href="full-width.html">Privacy Policy</a></li>             
+           <li><a href="full-width.html">Location</a></li>                            
+           <li><a href="contact.html">Contact</a></li> 
+           </ul>
+       </div>
+       <div class="clear"></div>
+       
+   </div> 
+    
+    
+</div>
+<script type="text/javascript">
+var main_menu=new main_menu.dd("main_menu");
+main_menu.init("main_menu","menuhover");
+</script>
+</body>
+</html>

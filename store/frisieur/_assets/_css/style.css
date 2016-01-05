@@ -1,0 +1,40 @@
+@import url( 'other/main-content.css' );
+@import url( 'other/header.css' );
+@import url( 'other/slogan.css' );
+@import url( 'other/html.css' );
+@import url( 'other/buttons.css' );
+@import url( 'other/go-top.css' );
+@import url( 'sections/small-appointment.css' );
+@import url( 'sections/presentation-v1.css' );
+@import url( 'sections/presentation-v2.css' );
+@import url( 'sections/special-content.css' );
+@import url( 'sections/about-us.css' );
+@import url( 'sections/opening-hours.css' );
+@import url( 'sections/contact-form.css' );
+@import url( 'sections/twitter.css' );
+@import url( 'sections/footer.css' );
+@import url( 'sections/appointment-popup.css' );
+@import url( 'sections/gallery-popup.css' );
+@import url( 'sections/gallery.css' );
+@import url( 'sections/blog.css' );
+
+/*------------------------------------------------------------------------------ main css things */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway';
+}
+
+body {
+    background: #eee;
+    color: #3b3b3b;
+}
+
+.clear {
+    clear: both;
+    display: block;
+}
+
+a {
+    cursor: pointer;
+}
