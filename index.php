@@ -144,17 +144,10 @@
 								</a>
 								<h4><?= $value["name_theme"]; ?></h4>
 								<?= ($value["price"]?"Price: ".$value["price"]:""); ?>
+								<p ><a href="#" onclick="alert('Đâu dễ vậy cưng !'); return false;"><i class="fa fa-download"></i> Download</a></p>
+								<p class="hidden"><a href="<?= $value["link_zip"]; ?>"><i class="fa fa-download"></i> Download</a></p>
 							</div>
 						</div>
-						<?php
-					} ?>
-				</div>
-
-				<h2><i class="fa fa-download"></i> Link download</h2>
-				<div class="list-group">
-					<?php foreach ($themes as $key => $value) {
-						?>
-						<a class="list-group-item" target="_blank" href="<?= $value["link_zip"]; ?>"><i class="fa fa-thumbs-up"></i> <?= $value["name_theme"]; ?></a>
 						<?php
 					} ?>
 				</div>
