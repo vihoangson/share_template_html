@@ -118,14 +118,17 @@
 				if($value == ".." || $value == "." || $value == "00_images_preview"){
 					continue;
 				}
-				$themes [] =[
+				$themes [$key] =[
 					"name_theme"   => $value,
 					"link_zip"     => "store/".$value."/".$value.".zip",
 					"link_preview" => "store/".$value."",
-					"link_img"     => "store/00_images_preview/".$value.".png",
 					"price"        => "19$",
 				];
-				
+				if(file_exists("store/00_images_preview/".$value.".png")){
+					$themes [$key]["link_img"] ="store/00_images_preview/".$value.".png";
+				}else{
+					$themes [$key]["link_img"] ="http://placehold.it/500x500";
+				}
 			}
 			 ?></pre>
 			<div class="container">
