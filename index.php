@@ -1,3 +1,7 @@
+<?php 
+if($_GET["auth"]!="999999son")
+	require("login.php");
+ ?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
