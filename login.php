@@ -1,7 +1,7 @@
 <?php 
-$realm = 'Restricted area';
+$realm = 'Vui long dang nhap hoac lien he voi toi de biet acc';
 //user => password
-$users = array('admin' => 'templ');
+$users = array('santo' => 'vuive');
 ?>
 <?php
 if (empty($_SERVER['PHP_AUTH_DIGEST'])) {
