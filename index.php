@@ -1,5 +1,5 @@
 <?php 
-if($_GET["auth"]!="999999son")
+if(isset($_GET["auth"]) && $_GET["auth"]!="999999son")
 	require("login.php");
  ?>
 <!DOCTYPE html>
