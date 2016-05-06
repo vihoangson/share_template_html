@@ -1,7 +1,24 @@
 <?php 
-if(isset($_GET["auth"]) && $_GET["auth"]!="999999son")
-	require("login.php");
- ?>
+	if(isset($_GET["auth"]) && $_GET["auth"]!="999999son"){
+		require("login.php");
+	}
+	$list = scandir("store/");
+	$themes=[];
+	foreach ($list as $key => $value) {
+		if($value == ".." || $value == "." || $value == "00_images_preview"){
+			continue;
+		}
+		$themes [$key] =[
+			"name_theme"   => $value,
+			"link_zip"     => "store/".$value."/".$value.".zip",
+			"link_preview" => "store/".$value."",
+			"price"        => "19$",
+		];
+		if(file_exists("store/00_images_preview/".$value.".png")){
+			$themes [$key]["link_img"] ="store/00_images_preview/".$value.".png";
+		}
+	}
+?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -23,118 +40,6 @@ if(isset($_GET["auth"]) && $_GET["auth"]!="999999son")
 			<![endif]-->
 		</head>
 		<body>
-			<?php
-			$themes = [
-				[
-					"name_theme"   => "Vitality-v1.3.6",
-					"link_zip"     => "store/vitality-v1.3.6/vitality-v1.3.6.zip",
-					"link_preview" => "store/vitality-v1.3.6",
-					"link_img"     => "store/00_images_preview/vitality-v1.3.6.png",
-					"price"        => "16$",
-				],
-
-				[
-					"name_theme"   => "Webapplayers.com",
-					"link_zip"     => "store/webapplayers.com/webapplayers.com.zip",
-					"link_preview" => "store/webapplayers.com",
-					"link_img"     => "store/00_images_preview/webapplayers.com.png",
-					"price"        => "20$",
-				],
-
-				[
-					"name_theme"   => "Templatevideo",
-					"link_zip"     => "store/templatevideo/templatevideo.zip",
-					"link_preview" => "store/templatevideo",
-					"link_img"     => "store/00_images_preview/templatevideo.png",
-					"price"        => "10$",
-				],
-
-				[
-					"name_theme"   => "Templatevideo2",
-					"link_zip"     => "store/templatevideo2/templatevideo2.zip",
-					"link_preview" => "store/templatevideo2",
-					"link_img"     => "store/00_images_preview/templatevideo2.png",
-					"price"        => "31$",
-				],
-
-				[
-					"name_theme"   => "Porto 4.4.0",
-					"link_zip"     => "store/porto/porto.zip",
-					"link_preview" => "store/porto",
-					"link_img"     => "store/00_images_preview/porto.png",
-					"price"        => "40$",
-				],
-
-				[
-					"name_theme"   => "Chelsea",
-					"link_zip"     => "store/chelsea/chelsea.zip",
-					"link_preview" => "store/chelsea",
-					"link_img"     => "store/00_images_preview/chelsea.png",
-					"price"        => "33$",
-				],
-
-				[
-					"name_theme"   => "Alliance-html",
-					"link_zip"     => "store/alliance-html/alliance-html.zip",
-					"link_preview" => "store/alliance-html",
-					"link_img"     => "store/00_images_preview/alliance-html.png",
-					"price"        => "23$",
-				],
-
-				[
-					"name_theme"   => "Smartstart",
-					"link_zip"     => "store/smartstart/smartstart.zip",
-					"link_preview" => "store/smartstart",
-					"link_img"     => "store/00_images_preview/smartstart.png",
-					"price"        => "23$",
-				],
-
-				[
-					"name_theme"   => "vcard",
-					"link_zip"     => "store/vcard/vcard.zip",
-					"link_preview" => "store/vcard",
-					"link_img"     => "store/00_images_preview/vcard.png",
-					"price"        => "17$",
-				],
-
-				[
-					"name_theme"   => "wedding-bells",
-					"link_zip"     => "store/wedding-bells/wedding-bells.zip",
-					"link_preview" => "store/wedding-bells",
-					"link_img"     => "store/00_images_preview/wedding-bells.png",
-					"price"        => "19$",
-				],
-
-				[
-					"name_theme"   => "ortheme",
-					"link_zip"     => "store/ortheme/ortheme.zip",
-					"link_preview" => "store/ortheme",
-					"link_img"     => "store/00_images_preview/ortheme.png",
-					"price"        => "19$",
-				],
-			];
-
-			?>
-			<pre><?php
-			$list = scandir("store/");
-			$themes=[];
-			foreach ($list as $key => $value) {
-				if($value == ".." || $value == "." || $value == "00_images_preview"){
-					continue;
-				}
-				$themes [$key] =[
-					"name_theme"   => $value,
-					"link_zip"     => "store/".$value."/".$value.".zip",
-					"link_preview" => "store/".$value."",
-					"price"        => "19$",
-				];
-				if(file_exists("store/00_images_preview/".$value.".png")){
-					$themes [$key]["link_img"] ="store/00_images_preview/".$value.".png";
-				}else{
-					$themes [$key]["link_img"] ="http://placehold.it/500x500";
-				}
-			}
-			 ?></pre>
 			<div class="container">
 				<h1 class="text-center">Sharing Template Website</h1>
 
@@ -144,7 +49,7 @@ if(isset($_GET["auth"]) && $_GET["auth"]!="999999son")
 						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 							<div class="">
 								<a target="_blank" href="<?= $value["link_preview"]; ?>" class="thumbnail">
-									<img src="<?= $value["link_img"]; ?>">
+									<img src="<?= $value["link_img"]; ?>" onError="this.src='http://placehold.it/500x500'">
 								</a>
 								<h4><?= $value["name_theme"]; ?></h4>
 								<?= ($value["price"]?"Price: ".$value["price"]:""); ?>
