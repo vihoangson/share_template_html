@@ -1,0 +1,54 @@
+#u40554
+{
+	background-color: #070707;
+}
+
+#u40554_align_to_page
+{
+	position: relative;
+}
+
+#u39937,#u40560,#u40556,#u40564,#u40568,#u40572
+{
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	position: relative;
+}
+
+#u40563,#u40557,#u40565,#u40569,#u40575
+{
+	border-width: 2px;
+	border-style: solid;
+	border-color: #FFFFFF;
+	background-color: transparent;
+	border-radius: 100px;
+	position: relative;
+}
+
+#u40561,#u40558,#u40566,#u40570,#u40573
+{
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	color: #FFFFFF;
+	font-size: 18px;
+	text-align: center;
+	line-height: 22px;
+	position: relative;
+}
+
+#u40555-4
+{
+	border-style: none;
+	background-color: transparent;
+	color: #A6A6A6;
+	font-size: 12px;
+	letter-spacing: 3px;
+	line-height: 14px;
+	text-align: center;
+	font-family: bebas-neue, sans-serif;
+	font-weight: 400;
+	position: relative;
+}
+
