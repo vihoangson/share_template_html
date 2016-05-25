@@ -2,6 +2,24 @@
 
 //============ ============ ============ ============
 
+// Tên template: booking_tour
+
+// Nguồn: themeforest
+
+// Ngày tạo: 20160525
+
+// Chủ đề: Booking tour 
+
+// Url: http://vihoangson.com/template/store/booking_tour/
+
+//============ ============ ============ ============
+
+
+
+[ADD]
+
+//============ ============ ============ ============
+
 // Tên template: beetube
 
 // Nguồn: themeforest
