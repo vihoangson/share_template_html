@@ -93,7 +93,8 @@
 			<!-- Bootstrap JavaScript -->
 			<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 			<script>
-				console.log("%cĐể download được về các bạn thêm dòng này trong console nhé $('.hidden').removeClass('hidden')", "color: red; font-size: x-large");
+				console.log("%cĐể download được về các bạn thêm dòng này trong console nhé ", "color: red; font-size: x-large");
+				console.log("%c$('.hidden').removeClass('hidden')", "color: blue; font-size: x-large");
 			</script>
 		</body>
 		</html>
