@@ -4,6 +4,7 @@
 	}
 	$list = scandir("store/");
 	$themes=[];
+	$now = time();
 	foreach ($list as $key => $value) {
 		if($value == ".." || $value == "." || $value == "00_images_preview"){
 			continue;
@@ -12,10 +13,12 @@
 			"name_theme"   => $value,
 			"link_zip"     => "store/".$value."/".$value.".zip",
 			"link_preview" => "store/".$value."",
-			"price"        => "19$",
+			"price"        => "19.9$",
 		];
 		if(file_exists("store/00_images_preview/".$value.".png")){
-			$themes [$key]["link_img"] ="store/00_images_preview/".$value.".png";
+			$themes [$key]["date_create"] = filemtime("store/00_images_preview/".$value.".png");
+			$themes [$key]["date_diff"]   = ($now - filemtime("store/00_images_preview/".$value.".png")<2*24*3600?"class_new":"");
+			$themes [$key]["link_img"]    ="store/00_images_preview/".$value.".png";
 		}
 	}
 ?>
@@ -31,7 +34,19 @@
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="vendor/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="vendor/css/style.css" rel="stylesheet">
-
+<style>
+.class_new {
+}
+span.new_icon {
+    background: url("/tmp/label_new red.png") no-repeat;
+    width: 60px;
+    height: 63px;
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 1px;
+}
+</style>
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -47,7 +62,8 @@
 					<?php foreach ($themes as $key => $value) {
 						?>
 						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-							<div class="">
+							<div class="<?= $value["date_diff"]; ?>">
+								<?= ($value["date_diff"]!=""?"<span class='new_icon'></span>":""); ?>
 								<a target="_blank" href="<?= $value["link_preview"]; ?>" class="thumbnail">
 									<img src="<?= $value["link_img"]; ?>" onError="this.src='http://placehold.it/500x500'">
 								</a>
