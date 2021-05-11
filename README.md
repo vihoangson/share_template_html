@@ -54,8 +54,13 @@
 
 // Ngày tạo: 20210511
 
-// Chủ đề: Tatto và nghệ thuật liên quan
-wget --recursive --domains marketifythemes.com --no-parent https://marketifythemes.com/html/tokyo/
+// Chủ đề: Profile cá nhân
+
+// wget --recursive --domains marketifythemes.com --no-parent https://marketifythemes.com/html/tokyo/
+
+// wget --recursive --domains marketifythemes.com --no-parent https://marketifythemes.com/html/tokyo/index-dark.html
+
+
 //============ ============  ============  ============ 
 
 
